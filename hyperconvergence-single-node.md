@@ -372,8 +372,10 @@ machine to continue with the rest of the setup.
 
 
 Once Hosted-engine setup is successfully complete, you can login to the
-virtualization manager using the IP of the VM.  
+virtualization manager using the IP of the VM.    
+ 
 -----
+
 
 
 ![18](images/image18.png)
