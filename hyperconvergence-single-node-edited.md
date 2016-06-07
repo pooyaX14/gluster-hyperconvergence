@@ -200,7 +200,9 @@ Run this command to install ovirt-engine-appliance on your laptop or host:
 yum install ovirt-engine-appliance
 ```
 
-`screen`
+```
+screen
+```
 
 This command will open up a new terminal for us to work on. The advantage of
 using the screen terminal is that in case of a network disruption, our process
@@ -211,7 +213,9 @@ The processes on the screen will run in the background, even if you detach a
 screen session. You can always attach it back whenever you want to work on it.
 
 
-```hosted-engine –-deploy```
+```
+hosted-engine –-deploy
+```
 
 This launches the setup which involves creating a VM and preparing it to install oVirt.
 
