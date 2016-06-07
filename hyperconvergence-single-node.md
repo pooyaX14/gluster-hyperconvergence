@@ -200,17 +200,20 @@ Run this command to install ovirt-engine-appliance on your laptop or host:
 yum install ovirt-engine-appliance
 ```
 
+
+
 ```
 screen
 ```
 
-This command will open up a new terminal for us to work on. The advantage of
+The `screen` command will open up a new terminal for us to work on. The advantage of
 using the screen terminal is that in case of a network disruption, our process
 will resume from the last restore point and not get completely halted. Screen
 also has many other advantages such as we can locally and remotely attach and
 detach a screen session whenever we want to, and also have multiple screens.
 The processes on the screen will run in the background, even if you detach a
 screen session. You can always attach it back whenever you want to work on it.
+
 
 
 ```
@@ -242,7 +245,8 @@ accepting the default 'Yes' option in the square brackets.
 ![2](images/image02.png)
 
 Here, we don't want to select the suggested default option **nfs3**. Instead, we
-type in **glusterfs** as our preferred storage.  
+type in **glusterfs** as our preferred storage.
+  
 
 
 ![3](images/image03.png)
@@ -251,12 +255,14 @@ We enter the volume path (10.209.65.225:/engine in our case) and proceed. For
 configuring IP tables, we say 'No', this is a temporary workaround as saying
 'Yes' results into gluster ports being left unopened.
 
+
 ![4](images/image04.png)
 
 The Engine VM FQDN name “hyperconvergence.virtual.com” is a dummy DNS name that
 we give at this stage, after adding an entry of this in the /etc/hosts file of
 our system, against a dummy IP address. We'll replace this IP address with that
 of the VM's IP address in further steps.
+
 
 ![5](images/image05.png)
 
@@ -266,18 +272,23 @@ asked if we want to automatically execute engine setup, we say 'No' and proceed
 with the other default options.
 
 
+
 ![6](images/image06.png)
 
 We enter the number of CPUs and memory and accept the suggested name for our
 machine `('hosted_engine_1')`.
 
 
+
 ![7](images/image07.png)
+
 ![8](images/image08.png)
+
 ![9](images/image09.png)
   
 We choose to 'Continue Setup' and proceed.
   
+
 
 ![11](images/image11.png)
 
@@ -292,13 +303,16 @@ We login to the VM by running the following command on a new terminal:
 remote-viewer vnc://10.209.65.225:5900
 ```
 
-`10.209.65.225` is the IP of our hostmachine and 5900 is the port number
+`10.209.65.225` is the IP of our hostmachine and `5900` is the port number
 required for remote access to our VM.
+
 
 
 ![12](images/image12.png)
 
 We enter the password that we set before.  
+
+
 
 ![13](images/image13.png)
 
@@ -310,13 +324,17 @@ command:
 
 ```hosted-engine –add-console-password```
 
+
+
 ![14](images/image14.png)
 
 Setting the password here and then running the remote viewer command again
 should result in successful login.  
 
 
+
 ![15](images/image15.png)
+
 ![16](images/image16.png)
 
 Once the VM is launched, entering the 'ip addr' command will help us know the
@@ -334,10 +352,10 @@ We have to now run 'engine-setup' on this VM (terminal) using the command
 'engine-setup' and once it's complete, we go back to the terminal on our host
 machine to continue with the rest of the setup.
 
+
+
 ![17](images/image17.png)
 
-
-  
 
 Once Hosted-engine setup is successfully complete, you can login to the
 virtualization manager using the IP of the VM
