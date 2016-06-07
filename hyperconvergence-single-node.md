@@ -81,7 +81,8 @@ firewall-cmd --zone=public --add-port=16514/tcp --permanent
 firewall-cmd –reload
 ```
 
-The reload command will reload all firewall rules and save our settings for the duration of this setup, so that we have access to the mentioned ports.
+The reload command will reload all firewall rules and save our settings for the
+duration of this setup, so that we have access to the mentioned ports.
 
 
 6) In this tutorial, we will be needing a storage volume to store virtual
@@ -102,7 +103,8 @@ mkdir -p /brick/b2
 mkdir -p /brick/b3
 ```
 
-Using these commands, we have created a directory called **brick** under root, and under it, three directories b1, b2 and b3.
+Using these commands, we have created a directory called **brick** under root,
+and under it, three directories b1, b2 and b3.
 
 7) Let's create a volume using our three bricks/directories!
 
@@ -125,7 +127,8 @@ This file becomes available on your system when you install the required rpms
 above. The options in the file are recommended for performance reasons, when
 implementing virtualisation.
 
-Note that after using this command, it's not advisable to use the volume to store anything other than virtual instance images.
+Note that after using this command, it's not advisable to use the volume to
+store anything other than virtual instance images.
 
 9) Adding permissions / ownership to our volume:
 
@@ -237,7 +240,9 @@ running may result into an error such as the above, and stop execution.
 
 We need to stop this service to proceed.  
 
-![1](images/image01.png)
+![1](images/image01.png)  
+
+----
 
 Pressing the 'Enter' key here without typing 'Yes' will result into it
 accepting the default 'Yes' option in the square brackets.    
