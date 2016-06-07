@@ -235,17 +235,17 @@ Now,
 Running the `hosted-engine –deploy` command when the NetworkManager service is
 running may result into an error such as the above, and stop execution.
 
-We need to stop this service to proceed.
+We need to stop this service to proceed.  
 
 ![1](images/image01.png)
 
 Pressing the 'Enter' key here without typing 'Yes' will result into it
-accepting the default 'Yes' option in the square brackets.  
+accepting the default 'Yes' option in the square brackets.    
 
 ![2](images/image02.png)
 
 Here, we don't want to select the suggested default option **nfs3**. Instead, we
-type in **glusterfs** as our preferred storage.
+type in **glusterfs** as our preferred storage.  
   
 
 
@@ -253,7 +253,7 @@ type in **glusterfs** as our preferred storage.
 
 We enter the volume path (10.209.65.225:/engine in our case) and proceed. For
 configuring IP tables, we say 'No', this is a temporary workaround as saying
-'Yes' results into gluster ports being left unopened.
+'Yes' results into gluster ports being left unopened.  
 
 
 ![4](images/image04.png)
@@ -261,7 +261,7 @@ configuring IP tables, we say 'No', this is a temporary workaround as saying
 The Engine VM FQDN name “hyperconvergence.virtual.com” is a dummy DNS name that
 we give at this stage, after adding an entry of this in the /etc/hosts file of
 our system, against a dummy IP address. We'll replace this IP address with that
-of the VM's IP address in further steps.
+of the VM's IP address in further steps.  
 
 
 ![5](images/image05.png)
@@ -269,14 +269,14 @@ of the VM's IP address in further steps.
 We want to configure oVirt with both Virt and Gluster mode. Automatically
 executing engine setup configures oVirt in Virt mode alone. So, when we're
 asked if we want to automatically execute engine setup, we say 'No' and proceed
-with the other default options.
+with the other default options.  
 
 
 
 ![6](images/image06.png)
 
 We enter the number of CPUs and memory and accept the suggested name for our
-machine `('hosted_engine_1')`.
+machine `('hosted_engine_1')`.  
 
 
 
@@ -286,7 +286,7 @@ machine `('hosted_engine_1')`.
 
 ![9](images/image09.png)
   
-We choose to 'Continue Setup' and proceed.
+We choose to 'Continue Setup' and proceed.  
   
 
 
@@ -294,7 +294,7 @@ We choose to 'Continue Setup' and proceed.
 
 At this stage, we have to login to our VM that our hosted engine setup created,
 to install oVirt on the VM. We do this because we chose to NOT run engine setup
-automatically in one of the previous steps.
+automatically in one of the previous steps. 
 
 
 We login to the VM by running the following command on a new terminal:
@@ -304,19 +304,19 @@ remote-viewer vnc://10.209.65.225:5900
 ```
 
 `10.209.65.225` is the IP of our hostmachine and `5900` is the port number
-required for remote access to our VM.
+required for remote access to our VM.  
 
 
 
 ![12](images/image12.png)
 
-We enter the password that we set before.  
+We enter the password that we set before.    
 
 
 
 ![13](images/image13.png)
 
-Sometimes, you may encounter an authentication failure such as the one above.
+Sometimes, you may encounter an authentication failure such as the one above. 
 
 In this case, you have to close the remote viewer, come back to your terminal
 where you entered the command for remote viewing, and enter the following
@@ -340,7 +340,7 @@ should result in successful login.
 Once the VM is launched, entering the 'ip addr' command will help us know the
 IP of the VM.
 Once the IP of our VM is obtained, we correct the entry in the /etc/hosts file
-of our host machine, where we entered a dummy IP earlier.
+of our host machine, where we entered a dummy IP earlier. 
 
 
 
@@ -350,7 +350,7 @@ to our local host machine and the other one to our VM.
 We'll copy both these entries and paste them in the /etc/hosts file of the VM.
 We have to now run 'engine-setup' on this VM (terminal) using the command
 'engine-setup' and once it's complete, we go back to the terminal on our host
-machine to continue with the rest of the setup.
+machine to continue with the rest of the setup.  
 
 
 
@@ -358,10 +358,9 @@ machine to continue with the rest of the setup.
 
 
 Once Hosted-engine setup is successfully complete, you can login to the
-virtualization manager using the IP of the VM
+virtualization manager using the IP of the VM.  
 
 
-  
 
 ![18](images/image18.png)
 
